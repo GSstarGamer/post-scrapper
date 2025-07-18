@@ -1,3 +1,7 @@
 /chromedata
 /tests
 /__pycache__
+post_scrapper/__pycache__/__init__.cpython-313.pyc
+post_scrapper/__pycache__/scrapper.cpython-313.pyc
+post_scrapper/targets/__pycache__/__init__.cpython-313.pyc
+post_scrapper/targets/__pycache__/facebook.cpython-313.pyc
