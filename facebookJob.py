@@ -4,12 +4,15 @@ from post_scrapper import Scrapper
 from post_scrapper.targets.facebook import Facebook
 import logging
 
+
 async def main():
     try:
         async with Scrapper() as s:
             fb = Facebook("Razer", mentions=True)
-            await s.setJob(fb)
-            await s.start()
+            # await s.setJob(fb)
+            # await s.start()
+
+            await s.open("https://fingerprint.com/products/bot-detection/")
 
             
     except Exception:
