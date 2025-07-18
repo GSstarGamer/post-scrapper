@@ -100,6 +100,11 @@ class Scrapper:
             raise RuntimeError("Failed to initialize Playwright")
 
     async def __aexit__(self, exc_t, exc_v, exc_tb):
+        inp = input("Code is finished; Press enter to exit. Type in 'debug' to enable debug mode for exit: ")
+
+        if inp.lower() == "debug":
+            log.setLevel(logging.DEBUG)
+
         log.debug("Exiting Scrapper context manager")
 
         if self.context:
@@ -135,7 +140,6 @@ class Scrapper:
             except Exception as e:
                 log.error("Error terminating Chrome process", exc_info=e)
 
-        input("Press enter to exit...")
 
 
 
